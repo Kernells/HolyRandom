@@ -45,4 +45,11 @@ int HolyRandom = HolyRandom::getHolyRandom(10);
 
 ```
 
+## Dependencies
+
+HolyRandom requires the following dependencies :
+
+- Httplib [https://github.com/yhirose/cpp-httplib]
+- Openssl (Required by Httplib)
+
 # Made by Kernels.
