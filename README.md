@@ -1,6 +1,12 @@
+<div align="center">
+
 # HolyRandom
 
-<img width="1536" height="1024" alt="HolyRandom" src="img/HolyRandom.png" />
+</div>
+
+<img width="800" height="800" alt="HolyRandom" src="img/HolyRandom.png" />
+
+## What is HolyRandom
 
 HolyRandom is a web-powered randomness engine that generates unpredictable numbers by crawling different websites,
 And converting their characters into numbers which are fed into a random number generator to decide
