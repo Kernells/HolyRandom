@@ -121,7 +121,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Coding\repos\HolyRandom\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,7 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HolyRandom.cpp" />
+    <ClCompile Include="tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dependencies\openssl\include\crypto\cmac.h" />
@@ -228,7 +228,7 @@
     <ClInclude Include="Dependencies\openssl\include\openssl\posix_time.h" />
     <ClInclude Include="Dependencies\openssl\include\openssl\quic.h" />
     <ClInclude Include="Dependencies\openssl\include\openssl\thread.h" />
-    <ClInclude Include="HolyRandom.h" />
+    <ClInclude Include="Include\HolyRandom.h" />
     <ClInclude Include="Dependencies\httplib\httplib.h" />
   </ItemGroup>
   <ItemGroup>

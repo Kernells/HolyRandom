@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "HolyRandom.h"
+#include <HolyRandom.h>
 
 int main()
 {

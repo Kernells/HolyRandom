@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HolyRandom.cpp">
+    <ClCompile Include="tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -23,7 +23,7 @@
     <ClInclude Include="Dependencies\httplib\httplib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HolyRandom.h">
+    <ClInclude Include="Include\HolyRandom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Dependencies\openssl\include\crypto\cmac.h">
