@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\openssl-native.3.5.5\build\native\openssl-native.props" Condition="Exists('packages\openssl-native.3.5.5\build\native\openssl-native.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ccfeb891-c09d-4919-a8cb-dd8c00c00d48}</ProjectGuid>
+    <RootNamespace>HolyRandom</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="HolyRandom.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\openssl\include\crypto\cmac.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\context.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\lms.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\lms_sig.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\lms_util.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\ml_dsa.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\ml_kem.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\riscv_arch.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\slh_dsa.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\sm4_platform.h" />
+    <ClInclude Include="Dependencies\openssl\include\crypto\x509_acert.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\bio_addr.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\bio_tfo.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\cms.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\common.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\crmf.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\deterministic_nonce.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\ech_helpers.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\encoder.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\e_os.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\e_winsock.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\fips.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\hashfunc.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\hashtable.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\hpke_util.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\json_enc.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\list.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\mem_alloc_utils.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\packet_quic.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\params.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\priority_queue.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\qlog.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\qlog_events.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\qlog_event_helpers.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_ackm.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_cc.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_cfq.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_channel.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_demux.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_engine.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_error.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_fc.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_fifd.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_lcidm.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_port.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_predef.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_rcidm.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_reactor.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_reactor_wait_ctx.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_record_rx.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_record_tx.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_record_util.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_rx_depack.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_sf_list.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_srtm.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_srt_gen.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_ssl.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_statm.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_stream.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_stream_map.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_thread_assist.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_tls.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_trace.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_tserver.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_txp.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_txpim.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_types.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_vlint.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_wire.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\quic_wire_pkt.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\rcu.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\recordmethod.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\ring_buf.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\rio_notifier.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\safe_math.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\skey.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\ssl.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\ssl3_cbc.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\ssl_unwrap.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\statem.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\thread.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\threads_common.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\thread_arch.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\time.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\tlssigalgs.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\to_hex.h" />
+    <ClInclude Include="Dependencies\openssl\include\internal\uint_set.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\byteorder.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\ech.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\e_ostime.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\hpke.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\indicator.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\ml_kem.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\posix_time.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\quic.h" />
+    <ClInclude Include="Dependencies\openssl\include\openssl\thread.h" />
+    <ClInclude Include="HolyRandom.h" />
+    <ClInclude Include="Dependencies\httplib\httplib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dependencies\openssl\include\crypto\riscv_arch.def" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\openssl-native.3.5.5\build\native\openssl-native.targets" Condition="Exists('packages\openssl-native.3.5.5\build\native\openssl-native.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\openssl-native.3.5.5\build\native\openssl-native.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl-native.3.5.5\build\native\openssl-native.props'))" />
+    <Error Condition="!Exists('packages\openssl-native.3.5.5\build\native\openssl-native.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl-native.3.5.5\build\native\openssl-native.targets'))" />
+  </Target>
+</Project>
