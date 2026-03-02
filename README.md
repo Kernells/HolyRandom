@@ -4,6 +4,8 @@
 
 <img width="800" height="800" alt="HolyRandom" src="img/HolyRandom.png" />
 
+</div>
+
 ## What is HolyRandom
 
 HolyRandom is a web-powered randomness engine that generates unpredictable numbers by crawling different websites,
@@ -44,5 +46,3 @@ int HolyRandom = HolyRandom::getHolyRandom(10);
 ```
 
 # Made by Kernels.
-
-</div>
