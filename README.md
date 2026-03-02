@@ -2,8 +2,6 @@
 
 # HolyRandom
 
-</div>
-
 <img width="800" height="800" alt="HolyRandom" src="img/HolyRandom.png" />
 
 ## What is HolyRandom
@@ -46,3 +44,5 @@ int HolyRandom = HolyRandom::getHolyRandom(10);
 ```
 
 # Made by Kernels.
+
+</div>
