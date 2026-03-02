@@ -11,6 +11,8 @@
 
 // Configuration
 
+#define VERSION 1.0
+
 #define COUNT_NEGATIVE_AS_DIGIT true
 #define ALLOW_NEGATIVES true
 #define ALLOW_POSITIVES true
