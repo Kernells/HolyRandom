@@ -11,7 +11,7 @@
 
 // Configuration
 
-#define VERSION 1.0
+#define VERSION 1.1
 
 #define COUNT_NEGATIVE_AS_DIGIT true
 #define ALLOW_NEGATIVES true
@@ -63,7 +63,7 @@ namespace HolyRandom {
 
 					std::random_device rd;
 					std::mt19937 engine(rd());
-					std::uniform_int_distribution<int> distribution(0, 2);
+					std::uniform_int_distribution<int> distribution(0, 1);
 					int random_num = distribution(engine);
 
 					int val = c - 'a' + 1;
@@ -79,16 +79,13 @@ namespace HolyRandom {
 					case 1:
 						Result += val;
 						break;
-					case 2:
-						Result *= val;
-						break;
 					}
 				}
 			}
 		}
 
 		bool IsNegative = (std::to_string(Result).find("-") != std::string::npos);
-
+	
 		StringResult = std::to_string(Result) + ResultStack;
 
 		StringedResult = StringResult;
@@ -115,10 +112,10 @@ namespace HolyRandom {
 		return std::to_string(Result);
 	}
 
-	int getHolyRandom(int Size) {
+	long int getHolyRandom(int Size) {
 
 		if (Size >= 11) { // Out of range guard
-			std::cout << "getHolyRandom size can't exceed 11.For longer random numbers use getHolyRandom_S.";
+			std::cout << "getHolyRandom size can't exceed 10.For longer random numbers use getHolyRandom_S.";
 			return -1;
 		}
 
@@ -158,7 +155,7 @@ namespace HolyRandom {
 
 					std::random_device rd;
 					std::mt19937 engine(rd());
-					std::uniform_int_distribution<int> distribution(0, 2);
+					std::uniform_int_distribution<int> distribution(0, 1);
 					int random_num = distribution(engine);
 
 					int val = c - 'a' + 1;
@@ -174,9 +171,6 @@ namespace HolyRandom {
 					case 1:
 						Result += val;
 						break;
-					case 2:
-						Result *= val;
-						break;
 					}
 				}
 			}
@@ -191,23 +185,22 @@ namespace HolyRandom {
 			std::remove(StringedResult.begin(), StringedResult.end(), '-'),
 			StringedResult.end()
 		);
-		if (StringedResult.length() > Size) {
-			std::string FixedResult = "";
-			for (int i = 0; i < Size; i++) {
-				FixedResult += StringedResult[i];
-			}
-			
-			if ((IsNegative && ALLOW_NEGATIVES) || !ALLOW_POSITIVES) {
 
-				FixedResult = "-" + FixedResult;
+		std::string FixedResult = "";
 
-				if (COUNT_NEGATIVE_AS_DIGIT) {
-					FixedResult.pop_back();
-				}
-			}
-			return std::stoi(FixedResult);
+		for (int i = 0; i < Size; i++) {
+			FixedResult += StringedResult[i];
 		}
-		return Result;
+
+		if ((IsNegative && ALLOW_NEGATIVES) || !ALLOW_POSITIVES) {
+
+			FixedResult = "-" + FixedResult;
+
+			if (COUNT_NEGATIVE_AS_DIGIT) {
+				FixedResult.pop_back();
+			}
+		}
+		return std::stoll(FixedResult);
 	}
 
 }
